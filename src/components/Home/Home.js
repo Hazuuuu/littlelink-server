@@ -84,6 +84,7 @@ import jetphotosLogo from '../../icons/jetphotos.svg';
 import substackLogo from '../../icons/substack.svg';
 import printablesLogo from '../../icons/printables.svg';
 import serializdLogo from '../../icons/serializd.svg';
+import pixivlogo from '../../icons/pixiv.svg';
 
 function Home(props) {
   let order = [];
@@ -887,6 +888,15 @@ function Home(props) {
                   displayName="Serializd"
                   logo={serializdLogo}
                   order={buttonOrder('SERIALIZD')}
+                />
+              )}
+              {runtimeConfig.PIXIV && (
+                <Button
+                  name="pixiv"
+                  href={runtimeConfig.PIXIV}
+                  displayName="Printables"
+                  logo={pixivLogo}
+                  order={buttonOrder('PIXIV')}
                 />
               )}
             </Sort>

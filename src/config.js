@@ -136,6 +136,7 @@ export const runtimeConfig =
         SUBSTACK: window?.env?.SUBSTACK,
         PRINTABLES: window?.env?.PRINTABLES,
         SERIALIZD: window?.env?.SERIALIZD,
+        PIXIV: window?.env?.PIXIV,
       }
     : {
         // server
@@ -490,5 +491,8 @@ export const runtimeConfig =
           : process.env.RAZZLE_PRINTABLES,
         SERIALIZD: nodeIsProduction
           ? process.env.SERIALIZD
-          : process.env.RAZZLE_SERIALIZD,
+        : process.env.RAZZLE_SERIALIZD,
+        PIXIV: nodeIsProduction
+        ?   process.env.PIXIV
+        :   process.env.RAZZLE_PIXIV,
       };
